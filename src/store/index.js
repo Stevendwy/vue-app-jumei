@@ -7,7 +7,7 @@ import cart from './mudules/cart'
 //import Router from 'vue-router'
 //import HelloWorld from '@/components/HelloWorld'
 
-Vue.use(Router)
+Vue.use(Vuex)
 
 //存放组件中信息的状态
 const state = {
