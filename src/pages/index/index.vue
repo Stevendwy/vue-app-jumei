@@ -2,16 +2,16 @@
 	<div class="page">
 		<div class="header">
 			<div class="left" @click="leftVisible=true">
-				<img src="../../assets/icon/magic.png" class="iconImg" alt=""/>
+        <img class="iconImg" src="../../assets/icon/magic.png" alt="">
 			</div>
 			
 			<div class="search" @click="searchVisible=true">
-				<img src="../../assets/icon/search_icon.png" alt="搜索"/>
+        <img src="../../assets/icon/search_icon.png" alt="搜索">
 				<span class="text">搜索商品 分类 功效 用户</span>
 			</div>
 			
 			<div class="right">
-				<img src="../../assets/icon/message.png" class="iconImg" alt=""/>
+        <img class="iconImg" src="../../assets/icon/message.png" alt="">
 			</div>
 		</div>
 		
@@ -24,7 +24,7 @@
 				<li class="item">店铺</li>
 			</ul>
 			
-			<div class="imput-block">
+      <div class="input-block">
 				<input type="text" class="search-input" placeholder="搜索 商品 分类 功效" />
 				<span class="cancel" @click="searchVisible=false">取消</span>			
 			</div>
@@ -75,12 +75,12 @@
 			//监听计算属性 来自vuex 中状态
 			getNavState(state){
 				var index = state + 1
-				//跳转子页面 this.$route.push()
+      // 跳转子页面 this.$router.push()
 				this.$router.push('/index/page' + index)
 			},
 			'$route' (to,from){
 				let toNum = to.path.split('/')[2][4]
-				let fromNum = from.path.splice('/')[2][4]
+      let fromNum = from.path.split('/')[2][4]
 				if (toNum > fromNum) {
 					this.transitionName = 'slide-left'
 				}else{
@@ -89,19 +89,22 @@
 			}
 		},
 		created () {
+    // 初始化
 			this.$router.push('/index/page1')
 		},
 		methods:{
 			onSwipeleft (){
 				let index = 1
 				let next = ""
-				if (this.$router.name != null) {
+      if(this.$route.name != null) {
 					index = +this.$route.name[4]
 					index < 8 ? (next = "page" + (index+1))&&(this.chooseItem = index+1)&&(this.chooseItem = +index+1)
 					:(next="page8")&&(this.chooseItem = 7)
+       this.$router.push('/index/' + next)
 				}
 			},
 			onSwipeRight () {
+      // this.$router.back(-1)
 				let index = 1
 				let back = ""
 				if(this.$route.name != null) {

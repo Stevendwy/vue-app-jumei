@@ -53,7 +53,7 @@
 					//多看文档 handler
 					if (this.selected == "首页") {
 						this.$router.push('/')
-						this.img = 'static/icon/indexchoose.png'
+          this.img1="static/icon/indexchoose.png"
 					}else{
 						this.img1 = 'static/icon/index.png'
 					}
@@ -91,15 +91,15 @@
 	}
 </script>
 
-<style lang="stylus" type="stylesheet/stylus">
-	@import '../common/stylus/mixin.styl'
-	.mint-tabbar
-	 background #fff
-	 border-1px-top()
-	 height 1.5625rem
-	 padding-top -.4rem
-	 .mint-tab-item.is-selected
-	  color #FE4070
-	  background #fff
-	  text-decoration none
+<style lang="stylus" type="stylesheet/stylus" scoped>
+@import '../common/stylus/mixin.styl'
+.mint-tabbar
+  background #fff
+  border-1px-top()
+  height 1.5625rem
+  padding-top -.4rem
+  .mint-tab-item.is-selected
+    color #FE4070
+    background #fff
+    text-decoration none
 </style>

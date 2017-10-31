@@ -14,7 +14,7 @@ import VueTouch from 'vue-touch'
 global.storage = window.localStorage
 
 //默认设置axios 请求
-//axios.defaults.baseUrl = 'http://localhost:3000' //设置默认请求前缀
+// axios.default.baseUrl = 'http://localhost:3000/'  //设置默认请求的前缀
 axios.defaults.withCredentials = true //允许跨域
 global.axios = axios //设置为全局引用
 

@@ -12,10 +12,10 @@ Vue.use(Vuex)
 //存放组件中信息的状态
 const state = {
 	navState:0,
-	activityLit:[],
+  activityList: [],
 	goodsList:[],
 	tabHidden:true,
-	prodectInfo:{},
+  productInfo: {},
 	selectTab:'首页'
 }
 
