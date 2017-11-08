@@ -33,7 +33,7 @@
 						<span>活动推荐</span>
 					</h2>
 					<ul class="metra-list-three">
-						<li v-for="(item,index) in produces">
+						<li v-for="(item,index) in products">
 							<img :src="item"/>
 						</li>
 					</ul>
